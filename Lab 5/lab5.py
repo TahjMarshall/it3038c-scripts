@@ -1,4 +1,4 @@
-def count_letters_vowels_consonants(word):
+def count(word):
     letter_count = 0
     vowel_count = 0
     consonant_count = 0
@@ -18,7 +18,7 @@ def count_letters_vowels_consonants(word):
 
 word = input("Type Something: ")
 
-letters, vowels, consonants = count_letters_vowels_consonants(word)
+letters, vowels, consonants = count(word)
 
 print(f"Number of letters: {letters}")
 print(f"Number of vowels: {vowels}")
