@@ -10,16 +10,13 @@ def get_amazon_product_details(url):
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
         
-        # Get product title
         title = soup.find(id='productTitle').get_text().strip()
 
-        # Get product price
         price = None
         price_span = soup.find(id='priceblock_ourprice')
         if price_span:
             price = price_span.get_text().strip()
         else:
-            # If the above id doesn't work, you can try others like 'priceblock_dealprice'
             pass
         
         return title, price
